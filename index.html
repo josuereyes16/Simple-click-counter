@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Click Counter</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #a2d4f7, #ffffff);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    #counter {
+      font-size: 6rem;
+      font-weight: bold;
+      color: #004d99;
+      margin: 20px;
+    }
+
+    button {
+      font-size: 1.8rem;
+      padding: 15px 35px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .click-btn {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .click-btn:hover {
+      background-color: #1976D2;
+      transform: scale(1.05);
+    }
+
+    .reset-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .reset-btn:hover {
+      background-color: #d32f2f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click Counter</h1>
+  <div id="counter">0</div>
+  <button class="click-btn" onclick="increment()">Click Me!</button>
+  <button class="reset-btn" onclick="reset()">Reset</button>
+
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById('counter').innerText = count;
+    }
+
+    function reset() {
+      count = 0;
+      document.getElementById('counter').innerText = count;
+    }
+  </script>
+
+</body>
+</html>
